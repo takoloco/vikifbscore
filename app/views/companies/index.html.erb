@@ -1,0 +1,25 @@
+<h1>Top 20 business brands on Facebook</h1>
+
+Is your page missing from the list? Click <%= link_to 'here', new_company_path %> to add it
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>FB Likes</th>
+    <th>Description</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @companies.sort_by {|comp|- comp.like.Count}.each do |company| %>
+  <tr>
+    <td><%= link_to(company.name, company.url, :rel => 'external') %></td>
+    <td><%= company.like.Count %></td>
+    <td><%= company.description %></td>
+    <td><%= link_to 'Show', company %></td>
+    <td><%= link_to 'Edit', edit_company_path(company) %></td>
+    <td><%= link_to 'Destroy', company, :method => :delete, :data => { :confirm => 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
