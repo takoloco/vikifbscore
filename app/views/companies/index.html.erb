@@ -1,19 +1,28 @@
+<div class="hdr">
+
 <h1>Top 20 business brands on Facebook</h1>
 
 Is your page missing from the list? Click <%= link_to 'here', new_company_path %> to add it
 
-<table>
+</div>
+<div class="content">
+
+<table class="table">
   <tr>
     <th>Name</th>
     <th>FB Likes</th>
     <th>Description</th>
   </tr>
 
+<% num = 0 %>
 <% @companies.each do |company| %>
-  <tr>
+  <tr<%= print_style_gray() unless num % 2 == 0 %>>
     <td><%= link_to(company.name, company.url, :rel => 'external') %></td>
     <td><%= company.like.Count %></td>
     <td><%= company.description %></td>
   </tr>
+<% num += 1 %>
 <% end %>
 </table>
+
+</div>

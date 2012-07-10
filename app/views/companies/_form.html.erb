@@ -1,4 +1,4 @@
-<%= form_for(@company) do |f| %>
+<%= form_for @company, :html => { :class => "new_company form" } do |f| %>
   <% if @company.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@company.errors.count, "error") %> prohibited this company from being saved:</h2>
@@ -12,16 +12,13 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
+    <%= f.label :name %><br /><%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :url %><br />
-    <%= f.text_field :url %>
+    <%= f.label :url %><br /><%= f.text_field :url %>
   </div>
   <div class="field">
-    <%= f.label :facebook_id %><br />
-    <%= f.text_field :facebook_id %>
+    <%= f.label :facebook_id %><br /><%= f.text_field :facebook_id %>
   </div>
   <div class="field">
     <%= f.label :description %><br />

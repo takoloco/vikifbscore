@@ -1,3 +1,71 @@
 // Place all the styles related to the companies controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+    margin: auto;
+    width: 960px;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 180%;
+  margin: 10px auto;
+}
+
+.hdr {
+  margin: 10px auto;
+  text-align: center;
+  width: 100%;
+}
+
+.content {
+  margin: auto;
+}
+
+.content .table {
+  margin: auto;
+}
+
+.content .form {
+  margin: auto;
+  text-align: center;
+  width: 25%;
+}
+
+.content .form .field {
+  margin: auto;
+  text-align: left;
+}
+
+.content .form .field label {
+  font-weight: bold;
+}
+
+.content .form .field input {
+}
+
+.content .form .field label:after {
+    content: ":";
+    font-weight: bold;
+}
+
+.content .table th {
+  background-color: #9F3;
+  font-weight: bold;
+  text-align: center;
+}
+
+.content .table td {
+  padding: 2px;
+  text-align: left;
+}
+
+.gray {
+  background-color: #CCC;
+}
+
+.ftr {
+  margin: auto;
+  text-align: center;
+  width: auto;
+}
