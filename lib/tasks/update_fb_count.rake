@@ -21,8 +21,8 @@ end
 namespace:daily do
   desc "Update FB Like Counts daily"
   task:UpdateFbCount do
-    require 'Company'
-    require 'Like'
+    #require 'Company'
+    #require 'Like'
     batch = UpdateFbCount.new()
     batch.run_update
   end
