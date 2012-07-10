@@ -1,8 +1,5 @@
 require "#{File.dirname(__FILE__)}/../../config/environment.rb"
 
-require 'Company'
-require 'Like'
-
 class UpdateFbCount
   def run_update
     Company.transaction do
@@ -24,6 +21,8 @@ end
 namespace:daily do
   desc "Update FB Like Counts daily"
   task:UpdateFbCount do
+    require 'Company'
+    require 'Like'
     batch = UpdateFbCount.new()
     batch.run_update
   end
